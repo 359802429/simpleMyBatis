@@ -5,6 +5,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -34,6 +35,7 @@ public class MyBatisUtil {
 
     public static SqlSession getSession(boolean autoCommit) {
         session = getFactory().openSession(autoCommit);
+        System.out.println("温馨提示：sqlsession已经打开了哟");
         return session;
     }
 
