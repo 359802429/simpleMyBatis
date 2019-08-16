@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.TeacherDao">
+
+    <!--${}替换，#{}占位-->
+    <!--对重复多次SQL语句进行“封装”，使用include再“调用”-->
+    <!--<sql id="xxx">-->
+        <!--<include refid="xx"></include>-->
+    <!--</sql>-->
+
+    <update id="updAreaById">
+        update teacher set fangxiang=#{fangxiang} where tid=#{tid}
+    </update>
+</mapper>
